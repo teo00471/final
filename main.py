@@ -39,6 +39,6 @@ while True:
         bratzinai('chameleon-test', temp)
     except Exception as e:
         print('Can not post', e)
-    time.sleep(5)
+    time.sleep(1)
     
     gc.collect()
