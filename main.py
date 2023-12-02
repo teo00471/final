@@ -20,6 +20,10 @@ light = machine.Pin(16,machine.Pin.OUT)
 while True:
     gc.collect()
     temp = get_temperature()
+    if temp > 30:
+       fan.on()
+    else:
+       fan.off()
     data_from_firebase = firebase_get_data('ring/ring')
     data_from_firebase_two = firebase_get_data('ring_time/ring_time')
     print('data from firebase ->', data_from_firebase)
